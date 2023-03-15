@@ -93,6 +93,7 @@ class Dev(Configuration):
         "debug_toolbar",
 
         #apps
+        "blango_auth",
         "blog",
     ]
 
@@ -156,6 +157,8 @@ class Dev(Configuration):
             'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
         },
     ]
+
+    AUTH_USER_MODEL = "blango_auth.User"
 
     # password hash
     PASSWORD_HASHERS = [
